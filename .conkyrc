@@ -1,0 +1,31 @@
+background no
+use_xft yes
+xftfont "nimbus sans l-7"
+xftalpha 0.9
+update_interval 3.0
+total_run_times 0
+own_window yes
+own_window_type desktop
+own_window_transparent no
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size  1024
+maximum_width 1440
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color FFFFFF
+default_shade_color 101319
+default_outline_color green
+#alignment top_middle
+alignment top_left
+gap_x 5
+gap_y 0
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+
+TEXT
+${color 0968E6}${font OpenLogos:size=12}A$font${voffset -4}$color  ${color 53aedc}Uptime: ${color}${uptime}${color 53aedc} | CPU: ${color}${cpu}%${color 53aedc} | TEMP 0,1: ${color}${platform coretemp.0 temp 2}C${color} ${color 53aedc}, ${color}${platform coretemp.0 temp 3}C${color 53aedc} | RAM: ${color}$memperc%${color 53aedc} | SWAP: ${color}$swapperc%${color 53aedc} | /root: ${color}${fs_free /}/${fs_size /}${color 53aedc} | /home: ${color}${fs_free /home}/${fs_size /home}${color 53aedc} | IP: ${color}${addr eth0}${color 53aedc} | Wireless: ${color}${wireless_essid wlan0} @ ${wireless_link_qual_perc ath0}%${color 53aedc} | Up: ${color}${upspeedf eth0}k/s${color 53aedc} | Down: ${color}${downspeedf eth0}k/s${color 53aedc} | Downloaded: ${color}${totaldown eth0}${color 53aedc}  |  ${color}${if_empty ${exec awk '{print $2}' /proc/acpi/ac_adapter/AC/state | grep 'on-line'}}${else}${endif}$battery $battery_time${color 53aedc} | ${color}${execi 1200 sh ~/scripts/weather.sh} ${color 53aedc} |   ${execi 1800 perl /home/anubis/scripts/conky-updates.pl}${color} ${execi 1800 ~/newpm.sh}${voffset -1}${font PizzaDude Bullets:size=9}U$font ${exec head -n1 ~/pacmanupdates.txt} ${voffset -1}${font PizzaDude Bullets:size=9}O$font ${exec tail -n1 ~/pacmanupdates.txt}${color 53aedc} | ${color} ${time %l:%M %P }  ${color 53aedc} | ${color}
