@@ -1,0 +1,5 @@
+// Za sprement syntaxo:
+:set ftp=php
+syntax on
+
+:set syntax=php
