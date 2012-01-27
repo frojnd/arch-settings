@@ -1,0 +1,28 @@
+arch settings
+
+WM:
+Openbox
+tint2
+conky
+
+apps so far:
+
+internet:
+        skype
+        chromium
+        git
+
+multimedia:
+        mplayer
+
+accessories:
+        xcalc
+
+file manager:
+        pcmanfm
+
+terminals:
+        urxvt
+
+graphics:
+        gimp
