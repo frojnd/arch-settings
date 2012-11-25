@@ -2,8 +2,9 @@
 ! urxvt specific settings
 !-------------------
 URxvt.scrollBar: false
-URxvt.transparent: true
-!URxvt*background: rgba:2222/2222/2222/dddd
+URxvt*.transparent: true
+!URxvt*.background: [20]#000000
+URxvt*.shading: 20
 URxvt*depth: 32
 URxvt.perl-ext-common:  default,matcher,url-select,keyboard-select
 URxvt.urlLauncher:      /usr/bin/firefox
