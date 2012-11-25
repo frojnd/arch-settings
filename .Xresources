@@ -1,47 +1,52 @@
-!my eye candy
-URxvt.scrollBar_righ: false
+!-------------------
+! urxvt specific settings
+!-------------------
 URxvt.scrollBar: false
 URxvt.transparent: true
-URxvt.shading: 25
-URxvt*background:   rgba:2222/2222/2222/dddd
-!URxvt*background:   rgba:0000/0000/0000/bbb
+!URxvt*background: rgba:2222/2222/2222/dddd
+URxvt*depth: 32
+URxvt.perl-ext-common:  default,matcher,url-select,keyboard-select
+URxvt.urlLauncher:      /usr/bin/firefox
+URxvt.matcher.button:   1
 
-URxvt*depth:            32
+! -- open up to 10 recent links --
+URxvt.keysym.C-Delete:  perl:matcher:last
+URxvt.keysym.M-Delete:  perl:matcher:list
+! -- select links with keyboard --
+! press left alt + u to enter selection mode
+! navigate with k, j, return - open link with browser
+! and quit selection mode, o, open but not quit selection
+! mode, y yank url and quit selection mode
+URxvt.keysym.M-u:    perl:url-select:select_next
+URxvt.url-select.launcher:   /usr/bin/firefox -new-tab
+URxvt.url-select.underline: true
 
-*foreground:              #a0a0a0
-!*foreground:              #F94848
-!black
-*color0:                  #1B1D1E
-*color8:                  #505354
-!red
-*color1:                  #F94848
-*color9:                  #CB4C5B
-!green
-*color2:                  #82B414
-*color10:                 #B6E354
-!yellow
-*color3:                  #FD971F
-*color11:                 #FEED6C
-!blue
-*color4:                  #4E82AA
-*color12:                 #0C73C2
-!magenta
-*color5:                  #8C54FE
-*color13:                 #9E6FFE
-!cyan
-*color6:                  #465457
-*color14:                 #899CA1
-!white
-*color7:                  #CCCCC6
-*color15:                 #F8F8F2
+! -- color matching text in a blue --
+URxvt.colorUL: #4682B4
 
-URxvt.perl-ext-common: default,matcher,clipboard
-URxvt.urlLauncher: chromium
-URxvt.matcher.button: 1
-URxvt.underlineURLs: true
+! -- fonts
+URxvt.font: xft:DejaVu Sans Mono:size=9
 
-URxvt*scrollstyle:plainxvt.backgreund: rgba:0000/0000/0000/bbxx
-
-!fonts 
-URxvt.font: xft:DejaVu Sans Mono:size=10
-!URxvt.font: xft:Terminus:size=12
+! -------------------
+! global settings
+! -------------------
+*background: #3B3B3B
+!*foreground: #acacab
+*foreground: #a0a0a0
+!-------------------
+*color0: #050505
+*color1: #e9897c
+*color2: #b6377d
+*color3: #ecebbe
+*color4: #a9cdeb
+*color5: #75507b
+*color6: #c9caec
+*color7: #f2f2f2
+*color8: #141414
+*color9: #f99286
+*color10: #c3f786
+*color11: #fcfbcc
+*color12: #b6defb
+*color13: #ad7fa8
+*color14: #d7d9fc
+*color15: #e2e2e2
